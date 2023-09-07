@@ -23,7 +23,7 @@ let navBar = `
                 <a class="nav-link" href="lhulan/index.html">Lukas Hulan</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="speck1/index.html">Andrew Peck</a>
+                <a class="nav-link" href="aspeck1/index.html">Andrew Peck</a>
             </li>
         </ul>
     </div>
