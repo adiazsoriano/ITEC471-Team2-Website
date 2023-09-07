@@ -3,24 +3,27 @@ let bootstrapJS = '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dis
 let navBar = `
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <a class="navbar-brand" href="#">
+          <img src="images/favicon-color.png" alt="Bootstrap" width="30" height="24">
+      </a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./project-page/index.html">Project</a>
+                <a class="nav-link" href="project-page/index.html">Project</a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="tbutler31/index.html">Thomas Butler</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./tbutler31/index.html">Thomas Butler</a>
+                <a class="nav-link" href="adiazsoriano/index.html">Angel Diaz-Soriano</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./adiazsoriano/index.html">Angel Diaz-Soriano</a>
+                <a class="nav-link" href="lhulan/index.html">Lukas Hulan</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./lhulan/index.html">Lukas Hulan</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./aspeck1/index.html">Andrew Peck</a>
+                <a class="nav-link" href="speck1/index.html">Andrew Peck</a>
             </li>
         </ul>
     </div>
