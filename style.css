@@ -64,6 +64,16 @@ main {
     border-right: 1px solid #ccc;
 }
 
+@media (max-width: 768px) {
+	.custom-margin .col-md-3:not(:last-child) {
+		border-right: none;
+	}
+}
+
+hr.my-5 {
+	border-top 1px solid #ccc;
+}
+
 footer {
 	background-color: #fff;
 }
