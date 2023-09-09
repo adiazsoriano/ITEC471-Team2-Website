@@ -60,6 +60,10 @@ main {
 	padding-top: 2em;
 }
 
+.custom-margin .col-md-3:not(:last-child) {
+    border-right: 1px solid #ccc;
+}
+
 footer {
 	background-color: #fff;
 }
