@@ -19,13 +19,13 @@ let navBar = `
                 <a class="nav-link" href="project-page/index.html">Project</a>
             </li> 
             <li class="nav-item">
-                <a class="nav-link" href="tbutler31/index.html">Thomas Butler</a>
+                <a class="nav-link" href="tbutler31/index.html">Lukas Hulan</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="adiazsoriano/index.html">Angel Diaz-Soriano</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="lhulan/index.html">Lukas Hulan</a>
+                <a class="nav-link" href="lhulan/index.html">Thomas Butler</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="aspeck1/index.html">Andrew Peck</a>
