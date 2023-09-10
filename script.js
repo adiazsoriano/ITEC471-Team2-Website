@@ -16,18 +16,17 @@ let navBar = `
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="project-page/index.html">Project</a>
-            </li> 
-            <li class="nav-item">
-                <a class="nav-link" href="lhulan/index.html">Lukas Hulan</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="adiazsoriano/index.html">Angel Diaz-Soriano</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tbutler31/index.html">Thomas Butler</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="aspeck1/index.html">Andrew Peck</a>
+			<li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Team Members
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="lhulan/index.html">Lukas Hulan</a></li>
+                    <li><a class="dropdown-item" href="adiazsoriano/index.html">Angel Diaz-Soriano</a></li>
+                    <li><a class="dropdown-item" href="tbutler31/index.html">Thomas Butler</a></li>
+                    <li><a class="dropdown-item" href="aspeck1/index.html">Andrew Peck</a></li>
+                </ul>
             </li>
         </ul>
 	  </div>
