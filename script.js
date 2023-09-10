@@ -1,10 +1,11 @@
+//bootstrap variables
 let bootstrapCSS = '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">';
 let bootstrapJS = '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>';
 let navBar = `
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-          <img src="images/favicon-color.png" alt="Bootstrap" width="30" height="24">
+      <a class="navbar-brand">
+          <img src="images/favicon-color.png" alt="Bootstrap" width="30" height="30">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,23 +35,30 @@ let navBar = `
     </div>
 </nav>
 <div class="nav-spacer"></div>`;
+
+/**
+ * Placeholder
+ */
 function importBootstrap() {
-    document.getElementById('bootstrap_css').innerHTML += bootstrapCSS;
-    document.getElementById('bootstrap_js').innerHTML += bootstrapJS;
+  document.getElementById('bootstrap_css').innerHTML += bootstrapCSS;
+  document.getElementById('bootstrap_js').innerHTML += bootstrapJS;
 }
 
+/**
+ * Placeolder
+ */
 function constructNavBar() {
-    document.getElementById('nav_bar').innerHTML += navBar;
+  document.getElementById('nav_bar').innerHTML += navBar;
 }
 
+//init html
 importBootstrap();
 constructNavBar();
 
 
 /*
-	Back to top button functionality
+  Back to top button functionality
 */
-
 let mybutton = document.getElementById("btn-back-to-top");
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -77,5 +85,5 @@ function backToTop() {
 }
 
 /*
-	End: back to top button
+  End: back to top button
 */
