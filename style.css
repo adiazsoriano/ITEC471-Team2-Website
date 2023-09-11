@@ -81,3 +81,11 @@ header {
 	-webkit-filter: invert(100%);
     filter: invert(100%);
 }
+
+#link_button {
+  width: 80%;
+}
+
+#collapse_button {
+  width: 50%;
+}
