@@ -23,6 +23,12 @@
     .spacer-ads {
       height: 15vh;
     }
+
+    .title-rounded-edges {
+      background-color: rgba(0, 0, 0, 0.60);
+      padding: 1em;
+      border-radius: 1em;
+    }
   </style>
 </head>
 
@@ -35,7 +41,9 @@
     <!-- Logo and Title -->
     <div class="logo-title centered-div">
       <img src="images/logo-color-transparent.png" alt="LATA Logo" class="img-fluid">
-      <h1 class="text-white display-3" style="background-color: rgba(0,0,0,0.75);">Angel Diaz-Soriano</h1>
+      <div class="title-rounded-edges">
+        <h1 class="text-white display-3">Angel Diaz-Soriano</h1>
+      </div>
     </div>
   </header>
 
@@ -43,17 +51,46 @@
 
   <main class="flex-fill bg-body pt-4">
     <div class="container">
-      <div class="row">
-        <h2 class="text-lg-start">About me</h2>
-        <p>
-          Something inspirational goes here.
-        </p>
-        <div class="col-lg-6 col-md-12">Soemthing about myself.</div>
-        <div class="col-lg-6 col-md-12">Something about myself.</div>
+      <div class="row mt-5">
+        <div class="col-7">
+          <h2>About me</h2>
+          <p class="lead">
+            Hello, I am Angel, a computer science major that has a concentration in software engineering.
+            I attend Radford University, and have a passion for technology that stems from a young age.
+            In a similar light to my team-members, I have a knack for hardware as well as software. Enjoying
+            all things that have to do with 1s and 0s. Although, I have a soft spot for the outdoors as much
+            as I enjoy the internals of computing. Hiking is something that is enjoyable for me when I'm not
+            spending countless hours honing my craft on my keyboard.
+          </p>
+        </div>
+        <div class="col-5">
+          <img src="images/hiking-pic.jpg" class="img-fluid rounded">
+        </div>
+      </div>
+      <hr class="my-5">
+      <div class="row mt-5">
+        <div class="col-2">
+          <img src="images/RUPA-logo.png" class="img-fluid rounded"> 
+        </div>
+        <div class="col-10">
+          <h2>My work and experience</h2>
+          <p class="lead">
+            I have roughly 4+ years of experience with programming. I didn't start tinkering with software 
+            until my senior year of high school. I can say that I don't regret anything I have learned so far. 
+            Along with developing a full stack application with a team in my software engineering 1 class (RUPA).
+            To helping students out as a peer instructor and tutor for the IT department. I have proefficiencies
+            in Java, Python, C, C#, PHP, HTML, CSS, JS, and BASH scripting. The list only goes on from this point
+             as my passion for learning continues its stride.
+          </p>
+        </div>
       </div>
     </div>
   </main>
-
+  <footer class="bg-body">
+    <div class="row text-center footer-copyright">
+      <p class="text-muted">&copy; 2023 Team LATA. MIT License</p>
+    </div>
+  </footer>
   <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
     <img src="images/up-arrow.png" />
   </button>
