@@ -30,8 +30,8 @@ let navBar = `
             </li>
         </ul>
         <div class="form-check form-switch mb-3 mb-lg-0 d-flex align-items-center">
-            <input type="checkbox" role="switch" id="flexSwitchCheckDefault" class="form-check-input me-2">
-            <label for="flexSwitchCheckDefault" class="form-check-label">
+            <input type="checkbox" role="switch" id="darkModeSwitch" class="form-check-input me-2">
+            <label for="darkModeSwitch" class="form-check-label">
                 <img src="images/dark-mode.png" class="img-fluid dark-mode-icon" height="30" width="30">
             </label>
         </div>
@@ -54,9 +54,62 @@ function constructNavBar() {
   document.getElementById('nav_bar').innerHTML += navBar;
 }
 
+/**
+ * Wait for an element defined by a CSS selector to load.
+ */
+function waitForElement(selector) {
+    return new Promise(resolve => {
+        if(document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+        
+        const observer = new MutationObserver(mutation => {
+            if (document.querySelector(selector)) {
+                observer.disconnect();
+                resolve(document.querySelector(selector));
+            }
+        });
+        
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    });
+}
+
+/**
+ * Sets the theme.
+ * "light" for light theme
+ * "dark" for dark theme
+ */
+function setTheme(theme) {
+    let darkModeElem = document.body;
+    darkModeElem.setAttribute("data-bs-theme", theme);
+}
+
+/**
+ * Attach click listener to dark mode toggle switch
+ */
+function addEventListenerToDarkModeSwitch() {
+    let onClickFunc = function darkModeOnClick() {
+        let elem = document.getElementById("darkModeSwitch");
+        let state = elem.checked;
+        if (state) {
+            setTheme("dark");
+        } else {
+            setTheme("light");
+        }
+    };
+    waitForElement("#darkModeSwitch").then((elem) => {
+        elem.addEventListener("click", onClickFunc);
+        onClickFunc();
+    });
+}
+
 //init html
 importBootstrap();
 constructNavBar();
+addEventListenerToDarkModeSwitch();
 
 
 /*
