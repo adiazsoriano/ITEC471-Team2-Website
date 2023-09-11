@@ -14,13 +14,6 @@ body {
    overflow-x: hidden;
 }
 
-.image-b1 {
-   background-image: url('images/background-image.jpg');
-   background-attachment: fixed;
-   background-size: cover;
-   background-position: center;
-}
-
 header {
    text-align: center;
    display: flex;
