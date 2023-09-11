@@ -4,6 +4,10 @@
    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.6);
 }
 
+.dark-mode-icon {
+	filter: invert(50%);
+}
+
 .nav-spacer {
 	height: 56px;
 }
