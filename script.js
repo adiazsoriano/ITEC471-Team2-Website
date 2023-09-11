@@ -1,10 +1,10 @@
 //bootstrap variables
 let bootstrapCSS = '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">';
 let navBar = `
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top user-select-none">
     <div class="container-fluid">
       <a class="navbar-brand">
-          <img src="images/favicon-color.png" alt="Bootstrap" width="30" height="30">
+          <img src="images/favicon-color.png" alt="Bootstrap" width="auto" height="30">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -29,6 +29,12 @@ let navBar = `
                 </ul>
             </li>
         </ul>
+        <div class="form-check form-switch mb-3 mb-lg-0 d-flex align-items-center">
+            <input type="checkbox" role="switch" id="flexSwitchCheckDefault" class="form-check-input me-2">
+            <label for="flexSwitchCheckDefault" class="form-check-label">
+                <img src="images/dark-mode.png" class="img-fluid dark-mode-icon" height="30" width="30">
+            </label>
+        </div>
 	  </div>
     </div>
 </nav>
