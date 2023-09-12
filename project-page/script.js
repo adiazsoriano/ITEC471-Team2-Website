@@ -29,37 +29,68 @@ let frontendHeaderText = "The Frontend Service";
 let frontendBodyText = `The frontend service provides a frontend interface for users to interact with the microservices.
 Communicates with the other services through APIs Responsive or adjusts to other devices.`;
 
+function EnableAll() {
+    document.getElementById('project_button').disabled = false;
+    document.getElementById('product_button').disabled = false;
+    document.getElementById('cart_button').disabled = false;
+    document.getElementById('order_button').disabled = false;
+    document.getElementById('user_button').disabled = false;
+    document.getElementById('notification_button').disabled = false;
+    document.getElementById('frontend_button').disabled = false;
+}
+
 function ProjectButtonClick() {
     document.getElementById('text_header').innerHTML = projectHeaderText;
     document.getElementById('text_body').innerHTML = projectBodyText;
+
+    EnableAll();
+    document.getElementById('project_button').disabled = true;
 }
 
 function ProductButtonClick() {
     document.getElementById('text_header').innerHTML = productHeaderText;
     document.getElementById('text_body').innerHTML = productBodyText;
+
+    EnableAll();
+    document.getElementById('product_button').disabled = true;
 }
 
 function CartButtonClick() {
     document.getElementById('text_header').innerHTML = cartHeaderText;
     document.getElementById('text_body').innerHTML = cartBodyText;
+
+    EnableAll();
+    document.getElementById('cart_button').disabled = true;
 }
 
 function OrderButtonClick() {
     document.getElementById('text_header').innerHTML = orderHeaderText;
     document.getElementById('text_body').innerHTML = orderBodyText;
+
+    EnableAll();
+    document.getElementById('order_button').disabled = true;
 }
 
 function UserButtonClick() {
     document.getElementById('text_header').innerHTML = userHeaderText;
     document.getElementById('text_body').innerHTML = userBodyText;
+
+    EnableAll();
+    document.getElementById('user_button').disabled = true;
 }
 
 function NotificationButtonClick() {
     document.getElementById('text_header').innerHTML = notificationHeaderText;
     document.getElementById('text_body').innerHTML = notificationBodyText;
+
+    EnableAll();
+    document.getElementById('notification_button').disabled = true;
 }
 
 function FrontendButtonClick() {
     document.getElementById('text_header').innerHTML = frontendHeaderText;
     document.getElementById('text_body').innerHTML = frontendBodyText;
+
+    EnableAll();
+    document.getElementById('frontend_button').disabled = true;
 }
