@@ -20,16 +20,14 @@
 <body class="d-flex flex-column min-vh-100 image-b1">
   <div id="bootstrap_css"></div>
   <div id="nav_bar"></div>
-  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-    <header class="text-center py-5">
-      <!-- Logo and Title -->
-      <div class="logo-title centered-div">
-        <img src="images/logo-color-transparent.png" alt="LATA Logo" class="img-fluid">
-        <h1 class="text-white display-2">E-Book Store</h1>
-      </div>
-    </header>
-    <div class="project-page-spacer"></div>
-  </div>
+  <header class="text-center py-5">
+    <!-- Logo and Title -->
+    <div class="logo-title centered-div">
+      <img src="images/logo-color-transparent.png" alt="LATA Logo" class="img-fluid">
+      <h1 class="text-white display-2">E-Book Store</h1>
+    </div>
+  </header>
+  <div class="spacer"></div>
   <main class="flex-fill bg-body pt-4">
     <div class="container">
       <div class="row mb-5">
@@ -37,71 +35,95 @@
           <img src="images/e-bookstore-flavor.jpeg" alt="Image Description" class="img-fluid">
         </div>
         <div class="col-md-6">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="text-center">
-                <button class="btn btn-primary btn-danger collapse_button" id="project_button" type="button" onclick="ProjectButtonClick();">
-                  The Project
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="project-page-spacer"></div>
-          <div class="row">
-            <div class="col-4">
-              <div class="text-center">
-                <button class="btn btn-primary btn-danger collapse_button" id="product_button" type="button" onclick="ProductButtonClick();">
-                  Product Service
-                </button>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="text-center">
-                <button class="btn btn-primary btn-danger collapse_button" id="chart_button" type="button" onclick="CartButtonClick();">
-                  Cart Service
-                </button>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="text-center">
-                <button class="btn btn-primary btn-danger collapse_button" id="order_button" type="button" onclick="OrderButtonClick();">
-                  Order Service
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="project-page-spacer"></div>
-          <div class="row">
-            <div class="col-4">
-              <div class="text-center">
-                <button class="btn btn-primary btn-danger collapse_button" id="user_button" type="button" onclick="UserButtonClick();">
-                  User Service
-                </button>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="text-center">
-                <button class="btn btn-primary btn-danger collapse_button" id="notification_button" type="button" onclick="NotificationButtonClick();">
-                  Notification Service
-                </button>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="text-center">
-                <button class="btn btn-primary btn-danger collapse_button" id="frontend_button" type="button" onclick="FrontendButtonClick();">
-                  Frontend Service
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="project-page-spacer"></div>
-          <h2 class="text-center text-md-start" id="text_header">The Project</h2>
-          <span class="text-start text-md-end" id="text_body">
+          <h2 class="text-center text-md-start">The Project</h2>
+          <span class="text-start text-md-end">
             Our project consists of building a microservices-based e-commerce platform that allows users to create
             profile, browse products, add them to the cart, and place orders. The platform will consist of several
             microservices, each responsible for a specific functionality. Together, all will come together to create a
             pristine electronic bookstore for all to use. It is our mission at LATA to deliver the best for our users.
           </span>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <h2 class="text-center">Modules</h2>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="text-center text-md-end">
+            <button class="btn btn-primary btn-danger" id="collapse_button" type="button" data-bs-toggle="collapse" data-bs-target="#module1info"
+              aria-expanded="false" aria-controls="module1info">
+              Product Service
+            </button>
+          </div>
+          <div class="collapse" id="module1info">
+            The product service is responsible for managing product information. Stores product details such as name,
+            description, price, and availability. Provides APIs to list all products, retrieve product details, and
+            check availability.
+          </div>
+        </div>
+        <div class="col-md-6 mt-2 mt-md-0">
+          <div class="text-center text-md-start">
+            <button class="btn btn-primary btn-danger" id="collapse_button" type="button" data-bs-toggle="collapse" data-bs-target="#module2info"
+              aria-expanded="false" aria-controls="module2info">
+              Cart Service
+            </button>
+          </div>
+          <div class="collapse" id="module2info">
+            The cart service manages user shopping carts. Allows users to add, remove, and update products in their
+            carts. Calculates the total price of items in the cart.
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="text-center text-md-end">
+            <button class="btn btn-primary btn-danger" id="collapse_button" type="button" data-bs-toggle="collapse" data-bs-target="#module3info"
+              aria-expanded="false" aria-controls="module3info">
+              Order Service
+            </button>
+          </div>
+          <div class="collapse" id="module3info">
+            The order service handles order creation and management. Collects user information, cart contents, and
+            calculates order total. Generates an order ID and handles payment processing.
+          </div>
+        </div>
+        <div class="col-md-6 mt-2 mt-md-0">
+          <div class="text-center text-md-start">
+            <button class="btn btn-primary btn-danger" id="collapse_button" type="button" data-bs-toggle="collapse" data-bs-target="#module4info"
+              aria-expanded="false" aria-controls="module4info">
+              User Service
+            </button>
+          </div>
+          <div class="collapse" id="module4info">
+            The user user service manages user information and authentication. Stores user data like name, address, and
+            payment information. Provides registration, login, and authentication functionality.
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="text-center text-md-end">
+            <button class="btn btn-primary btn-danger" id="collapse_button" type="button" data-bs-toggle="collapse" data-bs-target="#module5info"
+              aria-expanded="false" aria-controls="module5info">
+              Notification Service
+            </button>
+          </div>
+          <div class="collapse" id="module5info">
+            The notification service handles various notifications to users. Sends confirmation emails after order
+            placement. Sends alerts for successful registrations, order status updates, & etc.
+          </div>
+        </div>
+        <div class="col-md-6 mt-2 mt-md-0">
+          <div class="text-center text-md-start">
+            <button class="btn btn-primary btn-danger" id="collapse_button" type="button" data-bs-toggle="collapse" data-bs-target="#module6info"
+              aria-expanded="false" aria-controls="module6info">
+              Frontend Service
+            </button>
+          </div>
+          <div class="collapse" id="module6info">
+            The frontend service provides a frontend interface for users to interact with the microservices.
+            Communicates with the other services through APIs Responsive or adjusts to other devices.
+          </div>
         </div>
       </div>
     </div>
@@ -115,7 +137,6 @@
     <img src="images/up-arrow.png" />
   </button>
   <script src="script.js"></script>
-  <script src="project-page/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>

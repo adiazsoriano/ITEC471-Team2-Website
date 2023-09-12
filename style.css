@@ -53,10 +53,6 @@ header {
    height: 30vh;
 }
 
-.project-page-spacer {
-   height: 4vh;
-}
-
 .custom-margin .col-md-3:not(:last-child) {
     border-right: var(--bs-border-width) solid rgba(var(--bs-body-color-rgb), 0.25);
 }
@@ -86,10 +82,10 @@ header {
     filter: invert(100%);
 }
 
-.link_button {
+#link_button {
   width: 80%;
 }
 
-.collapse_button {
-  width: 100%;
+#collapse_button {
+  width: 50%;
 }
