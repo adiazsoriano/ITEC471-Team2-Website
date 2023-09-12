@@ -53,6 +53,10 @@ header {
    height: 30vh;
 }
 
+.small-spacer {
+  height: 10vh;
+}
+
 .custom-margin .col-md-3:not(:last-child) {
     border-right: var(--bs-border-width) solid rgba(var(--bs-body-color-rgb), 0.25);
 }
@@ -84,8 +88,4 @@ header {
 
 #link_button {
   width: 80%;
-}
-
-#collapse_button {
-  width: 50%;
 }
