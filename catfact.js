@@ -1,8 +1,9 @@
 
 /**
- * Placeholder
- * @param {*} request 
- * @returns 
+ * Send get request for data and wait for a response.
+ * @param {*} request Data URL
+ * @returns received data
+ * @throws Error if status code is not 200
  */
 async function fetchData(request) {
   const response = await fetch(request);
@@ -14,7 +15,7 @@ async function fetchData(request) {
 }
 
 /**
- * Placeholder
+ * Attempt to fetch cat fact and insert it onto the page
  */
 function getCatFact() {
   const factRequest = `https://api.allorigins.win/get?url=${encodeURIComponent('https://meowfacts.herokuapp.com/')}`;
@@ -22,6 +23,7 @@ function getCatFact() {
 
   fetchData(factRequest)
     .then(response => {
+      // Match `data:["<string>"` and extract <string>
       const regex = /"data":\["([^"]+)"/;
       const factText = response.contents.match(regex)[1];
       factContainer.innerHTML = factText;

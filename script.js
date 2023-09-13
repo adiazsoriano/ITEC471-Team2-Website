@@ -2,53 +2,53 @@
 let bootstrapCSS = '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">';
 let navBar = `
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top user-select-none">
-    <div class="container-fluid">
-      <a class="navbar-brand">
-          <img src="images/favicon-color.png" alt="Bootstrap" width="auto" height="30">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="project-page/index.html">Project</a>
-            </li>
-			<li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Team Members
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="lhulan/index.html">Lukas Hulan</a></li>
-                    <li><a class="dropdown-item" href="adiazsoriano/index.html">Angel Diaz-Soriano</a></li>
-                    <li><a class="dropdown-item" href="tbutler31/index.html">Thomas Butler</a></li>
-                    <li><a class="dropdown-item" href="aspeck1/index.html">Andrew Peck</a></li>
-                </ul>
-            </li>
-        </ul>
-        <div class="form-check form-switch mb-3 mb-lg-0 d-flex align-items-center">
-            <input type="checkbox" role="switch" id="darkModeSwitch" class="form-check-input me-2">
-            <label for="darkModeSwitch" class="form-check-label">
-                <img src="images/dark-mode.png" class="img-fluid dark-mode-icon" height="30" width="30">
-            </label>
-        </div>
-	  </div>
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <img src="images/favicon-color.png" alt="Bootstrap" width="auto" height="30">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="project-page/index.html">Project</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Team Members
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="lhulan/index.html">Lukas Hulan</a></li>
+            <li><a class="dropdown-item" href="adiazsoriano/index.html">Angel Diaz-Soriano</a></li>
+            <li><a class="dropdown-item" href="tbutler31/index.html">Thomas Butler</a></li>
+            <li><a class="dropdown-item" href="aspeck1/index.html">Andrew Peck</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="form-check form-switch mb-3 mb-lg-0 d-flex align-items-center">
+        <input type="checkbox" role="switch" id="darkModeSwitch" class="form-check-input me-2">
+        <label for="darkModeSwitch" class="form-check-label">
+          <img src="images/dark-mode.png" class="img-fluid dark-mode-icon" height="30" width="30">
+        </label>
+      </div>
     </div>
+  </div>
 </nav>
 <div class="nav-spacer"></div>`;
 
 /**
- * Placeholder
+ * Insert Bootstrap CSS link.
  */
 function importBootstrap() {
   document.getElementById('bootstrap_css').innerHTML += bootstrapCSS;
 }
 
 /**
- * Placeolder
+ * Load nav bar into page.
  */
 function constructNavBar() {
   document.getElementById('nav_bar').innerHTML += navBar;
@@ -83,27 +83,27 @@ function waitForElement(selector) {
  * "dark" for dark theme
  */
 function setTheme(theme) {
-    let darkModeElem = document.body;
-    darkModeElem.setAttribute("data-bs-theme", theme);
+  let darkModeElem = document.body;
+  darkModeElem.setAttribute("data-bs-theme", theme);
 }
 
 /**
  * Attach click listener to dark mode toggle switch
  */
 function addEventListenerToDarkModeSwitch() {
-    let onClickFunc = function darkModeOnClick() {
-        let elem = document.getElementById("darkModeSwitch");
-        let state = elem.checked;
-        if (state) {
-            setTheme("dark");
-        } else {
-            setTheme("light");
-        }
-    };
-    waitForElement("#darkModeSwitch").then((elem) => {
-        elem.addEventListener("click", onClickFunc);
-        onClickFunc();
-    });
+  let onClickFunc = function darkModeOnClick() {
+    let elem = document.getElementById("darkModeSwitch");
+    let state = elem.checked;
+    if (state) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+  waitForElement("#darkModeSwitch").then((elem) => {
+    elem.addEventListener("click", onClickFunc);
+    onClickFunc();
+  });
 }
 
 //init html
