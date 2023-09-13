@@ -58,23 +58,23 @@ function constructNavBar() {
  * Wait for an element defined by a CSS selector to load.
  */
 function waitForElement(selector) {
-    return new Promise(resolve => {
-        if(document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
-        }
-        
-        const observer = new MutationObserver(mutation => {
-            if (document.querySelector(selector)) {
-                observer.disconnect();
-                resolve(document.querySelector(selector));
-            }
-        });
-        
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
+  return new Promise(resolve => {
+    if (document.querySelector(selector)) {
+      return resolve(document.querySelector(selector));
+    }
+
+    const observer = new MutationObserver(mutation => {
+      if (document.querySelector(selector)) {
+        observer.disconnect();
+        resolve(document.querySelector(selector));
+      }
     });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  });
 }
 
 /**
